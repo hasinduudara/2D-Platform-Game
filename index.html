@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Platform Game</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="player"></div>
+      <div id="game-ui">
+        <div>Level: <span id="level-display">1</span></div>
+        <div>Score: <span id="score-display">0</span></div>
+        <div>Lives: <span id="lives-display">3</span></div>
+        <div>
+          Coins: <span id="coins-collected">0</span>/<span id="total-coins"
+            >0</span
+          >
+        </div>
+      </div>
+      <div id="start-screen">
+        <h1>Platform Adventure</h1>
+        <p>Collect all yellow coins to reset the level and move to the next!</p>
+        <p>Use arrow keys or WASD to move and jump</p>
+        <button id="start-button">Start Game</button>
+      </div>
+      <div id="level-complete">
+        <h1>Level Complete!</h1>
+        <p>All coins collected!</p>
+        <p>Score: <span id="level-score">0</span></p>
+        <button id="next-level">Next Level</button>
+      </div>
+      <div id="game-over">
+        <h1>Game Over</h1>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button id="restart-button">Play Again</button>
+      </div>
+      <div id="game-complete">
+        <h1>Game Complete!</h1>
+        <p>Congratulations! You've completed all levels!</p>
+        <p>Final Score: <span id="complete-score">0</span></p>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

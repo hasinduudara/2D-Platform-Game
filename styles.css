@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #87ceeb;
+  overflow: hidden;
+  border: 4px solid #444;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#player {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ff5722;
+  border-radius: 20%;
+  z-index: 10;
+}
+
+.platform {
+  position: absolute;
+  background-color: #4caf50;
+  border-top: 4px solid #2e7d32;
+}
+
+.coin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  z-index: 5;
+  animation: coin-spin 1s infinite linear;
+}
+
+.enemy {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #f44336;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.goal {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #2196f3;
+  border-radius: 5px;
+  z-index: 5;
+  animation: goal-pulse 1.5s infinite;
+}
+
+#game-ui {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+#level-complete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  z-index: 30;
+  display: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+#game-over,
+#game-complete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  z-index: 30;
+  display: none;
+}
+
+#start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  z-index: 30;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  max-width: 600px;
+}
+
+@keyframes coin-spin {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes goal-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #2196f3;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #2196f3;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #2196f3;
+  }
+}
